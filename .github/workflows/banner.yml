@@ -22,6 +22,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Get the latest Lookout and its dependencies
+        run: |
+          bash .github/scripts/update_lookout.sh
+          pip install -q numpy pillow
       - name: First run in a copy - turn it into a profile README
         if: github.repository != 'Flaco2009/lookout-banner'
         run: |

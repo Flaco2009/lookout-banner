@@ -76,10 +76,12 @@ Only the owner of a banner can change it. Issues from anyone else are politely c
 
 <img src="assets/readme/how.webp" alt="Every 30 minutes a GitHub Action runs generate.py which draws an animated SVG" width="100%">
 
-- [`generate.py`](generate.py) draws the whole scene as one animated SVG. No images, no libraries, just Python and math
+- [`terrain.py`](terrain.py) ray-casts a procedural 3D landscape (noise heightfield, real sun lighting, snow line, forests, haze) and paints clouds, fog and firs
+- [`generate.py`](generate.py) layers that with the live parts (tower, lights, lightning, rain, snow, stars) into one animated SVG
 - [`banner.yml`](.github/workflows/banner.yml) runs it every 30 minutes and pushes the result to the `output` branch
 - [`settings.yml`](.github/workflows/settings.yml) turns your *Save* issues into [`config.json`](config.json)
-- The playground runs the very same `generate.py` in your browser, so the preview is exactly what you get
+- The playground runs the very same code in your browser, so the preview is exactly what you get
+- Every copy pulls the newest renderer from this repo on each run, so new features show up on your profile automatically (set `"auto_update": false` in `config.json` to opt out)
 
 ## ❓ FAQ
 

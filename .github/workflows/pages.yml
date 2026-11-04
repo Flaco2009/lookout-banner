@@ -3,7 +3,7 @@ name: Deploy playground
 on:
   push:
     branches: [main]
-    paths: ["docs/**", "generate.py", ".github/workflows/pages.yml"]
+    paths: ["docs/**", "generate.py", "terrain.py", "assets/terrain/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -28,7 +28,8 @@ jobs:
       - name: Build site
         run: |
           mkdir _site
-          cp docs/* generate.py _site/
+          cp docs/* generate.py terrain.py _site/
+          mkdir -p _site/assets && cp -r assets/terrain _site/assets/
       - uses: actions/configure-pages@v5
         with:
           enablement: true
