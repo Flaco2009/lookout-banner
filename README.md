@@ -15,6 +15,9 @@ A fire lookout above a sea of treetops that follows the real season, weather and
 
 <p align="center"><sub>☝️ This is live. It changes while you read this.</sub></p>
 
+<p align="center"><img src="assets/readme/demo.gif" alt="Noon, dusk, night, thunderstorm, autumn, snowfall and a December night" width="640"><br>
+<sub>Noon · dusk · night · thunderstorm · autumn · snowfall · December</sub></p>
+
 ## ✨ What it does
 
 | | |
